@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(203, 58, 126);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  color: #000;
+}
+
+/* Navigation */
+nav {
+  background: #fff;
+  border-bottom: 2px solid #000;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(141, 3, 141);
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: pink;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  color: purple;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 0, 242);
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Lists */
+ol {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(255, 0, 225);
+  padding: 15px 40px;
+  margin-bottom: 20px;
+}
+
+ul {
+  color: rgb(178, 124, 133);
+}
+
+ul a {
+  color: rgb(204, 0, 255);
+  font-size: 1em;
+}
+
+/* Paragraphs */
+p {
+  font-family: cursive;
+  background-color: pink;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+p.special {
+  background-color: transparent;
+}
+
+/* Blog Container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: one column */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.column {
+  background: lightblue;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
+}
+.links-section {
+  grid-column: 1 / -1; 
+  background: transparent; 
+  border: none;        
+  padding: 10px 0;
+}
+
+.links-section p {
+  background: transparent; 
+  margin-bottom: 10px;
+}
+
+
+
+
+.links-section,
+.footer {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Footer specific */
+.footer {
+  grid-column: 1 / -1;
+  background: transparent;
+  border: none;          
+  text-align: left;
+  padding: 10px;
+}
+
+.footer p {
+  background: transparent;
+  border: none;            
+  margin: 0;
+  font-style: italic;
+}
+
+
+/* Tablet: 2-column layout */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop: 3-column layout */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
